@@ -1,0 +1,2 @@
+def dollar():
+  print("Loaded")

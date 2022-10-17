@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "python-template"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8.0,<3.9"
+numpy = "^1.22.2"
+pygame = "^2.1.2"
+keyboard = "^0.13.5"
+ammo = "^0.0.7"
+food = "^0.0.11"
+termcolor = "^2.0.1"
+simple-colors = "^0.1.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
