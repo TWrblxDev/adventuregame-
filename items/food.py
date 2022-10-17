@@ -2,6 +2,6 @@ import random
 
 def food():
   print("Loaded")
-  food = ['Apple', 'Hotdog']
+  food = ['Apple', 'Hotdog', 'Burger']
   print(food)
   
