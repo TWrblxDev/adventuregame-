@@ -61,7 +61,7 @@ if file == "Continue" or "continue":
         print("A game by")
         print("By James and Michael")
         print("Have fun")
-        print("A personal project by us")
+        print("A personal project by us and others")
         print("2022")
         time.sleep(1)
         clear()
