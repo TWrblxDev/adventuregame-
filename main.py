@@ -5,6 +5,7 @@ import Game_Time
 import keyboard
 import sys
 import Chapter_1.East
+
 import Chapter_1.North
 import Chapter_2.Chapter2
 import inv.inv
@@ -12,64 +13,91 @@ import random
 import items.ammo
 import items.food
 import items.dollar
+import simple_colors
+import items.power
+import items.monster
+import debug.debug
+import Credits.Credits
+
+
 
 clear = lambda: os.system('clear')
 
 
+
 #Chapter_1.North.north()
+#Chapter_1
 #Chapter_1.East.East()
+
 #Chapter_2.Chapter2.loaded()
 #inv.inv.inv()
 #exit()
 #Make sure to clean up the statements and to add comments, I have no idea what the code is doing
 
+#items.monster.monster()
+
+#debug.debug.debug()
+
 original_stdout = sys.stdout
+
+
+Credits.Credits.credits()
+time.sleep(50)
+clear()
+
+
+
+#simple_colors
+red = simple_colors.red
+yellow = simple_colors.yellow
+blue = simple_colors.blue
+cyan = simple_colors.cyan
+magenta = simple_colors.magenta
+green = simple_colors.green
+clear()
+
+
+print(yellow("Welcome"), blue("To the"), red("adventure Game"))
+file = input(yellow("Continue or start a new game? "))
+
+clear()
 
 
 
 time.sleep(5)
+
 clear()
 
-#Skips intro
-#Chapter_1.Chapter_1.Chapter1()
-#exit()
-
-
-
-
-
-print("Welcome to this adventure game.")
-file = input("Continue or start a new game? ")
-
 if file == "Continue" or "continue":
-    print("there is no saved game!")
-    file = input("Start a new game?")
+    print(red("there is no saved game!"))
+    file = input(yellow("Start a new game?"))
     if file == "start" or "Start" or "yes" or "Yes":
-        print("IMPORTANT - when typing something, use lowercase")
-        inv.inv.inv()
+        print("")
+        print(red("IMPORTANT - when typing something, use lowercase"))
+        #inv.inv.inv()
         time.sleep(3)
         clear()
         time.sleep(1)
-        print("Loading...")
+        print(cyan("Loading..."))
         time.sleep(1)
         clear()
         time.sleep(1.02)
-        print("Loaded")
+        print(yellow("Loaded"))
         time.sleep(1.999999999999999999999999999)
         clear()
-        print("Adventure Game")
-        print("A game by")
-        print("By James and Michael")
-        print("Have fun")
-        print("A personal project by us and others")
-        print("2022")
-        time.sleep(1)
+        print(cyan("Adventure Game"))
+        print(red("A game by"))
+        print(yellow("By James and Michael"))
+        print(blue("Have fun"))
+        print(magenta("A personal project by us and others"))
+        print(blue("2022"))
+        time.sleep(5)
         clear()
-        print("Are you ready?")
+        print(yellow("Are you ready?"))
         file = input(" To Play: ")
         if file == "yes" or "Yes":
             clear()
-            NAME = str(input("Enter your name for the game: "))
+            NAME = str(input(blue("Enter your name for the game: ")))
             print("hello", NAME, "I am Your Guide for your adventure. You can call me Bill")
             time.sleep(2)
             print("Starting game...")
@@ -85,15 +113,18 @@ if file == "Continue" or "continue":
             input(
                 "We interupt this program for breaking news!! Zombies have attacked eastern Canada and on on the move to Ontario. If you are near these area we urge you to ready yourselfs. "
             )
-            
-            input('You say "OH NO. I better get ready for battle."')
+            print("")
+            print("")
+            print("")
+            print("")
+            input(red('You say "OH NO. I better get ready for battle."'))
             clear()
             time.sleep(1)
             #This part is for the weapon of choice
-            print('Chose your Weapon')
+            print(blue('Chose your Weapon'))
             print("")
 
-            file = input("Your Weapon is Blaster Pistol. Type 'ok' to continue ")
+            file = input(blue("Your Weapon is Blaster Pistol. Type 'ok' to continue"))
 
             if file == "ok" or "Ok" or "OK":
                 Blaster_Pistol.loaded()
@@ -102,4 +133,4 @@ if file == "Continue" or "continue":
 
 
               
-                        
+

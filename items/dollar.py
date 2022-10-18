@@ -1,2 +1,4 @@
+import simple_colors
+
 def dollar():
-  print("Loaded")
+  print(simple_colors.red("[DEBUG] - Loaded Dollar"))

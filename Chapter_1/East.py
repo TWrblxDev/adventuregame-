@@ -1,9 +1,27 @@
+import os 
+import time
+import Blaster_Pistol
+import Game_Time
+import keyboard
+import sys
+import Chapter_1.East
+import Chapter_1.North
+import Chapter_2.Chapter2
+import inv.inv
+import random
+import items.ammo
+import items.food
+import items.dollar
+import simple_colors
+import items.power
+import debug.debug
 import time
 import os
 import Chapter_1.West
 import Chapter_1.North
 import random
 import inv.inv
+import simple_colors
 
 dollar = 20
 
@@ -11,7 +29,7 @@ PlayerHealth = 100
 EnemyHealth = 20
 EnemyDamage = 20
 
-bossnames = ['Mutated Bear', 'Mutated Lion']
+bossnames = ["Mutated Bear", "Mutated Lion"]
 
 
 def East():
@@ -59,7 +77,8 @@ def East():
                 print("You Died! Restart The Game To Replay")
                 exit()
 
-            print(bossnames, "Health = ", EnemyHealth)
+                for names in bossnames:
+                     print(names, simple_colors.red("Health = ", EnemyHealth))
             time.sleep(0.5)
             print("Player Health = ", PlayerHealth)
             time.sleep(0.5)
@@ -80,18 +99,19 @@ def East():
             if file == ("heal" or "Heal"):
                 PlayerHealth = (PlayerHealth + 30)
                 print(" ")
-                print("You healed yourself for 20 HP")
+                print(simple_colors.cyan("You healed yourself for 20 HP"))
                 time.sleep(0.5)
             #max health
             if PlayerHealth > int(50):
                 PlayerHealth = 50
                 print(" ")
-                print("Max HP reached!")
+                print(simple_colors.red("Max HP reached!"))
                 time.sleep(0.5)
             #Enemy attack
             PlayerHealth = (PlayerHealth - 10)
             print(" ")
-            print(bossnames," attacked you, dealing 10 DMG")
+            for names in bossnames:
+                 print(names, simple_colors.red(" attacked you, dealing 10 DMG"))
             file = ("")
             time.sleep(1)
             ClearLoop = 80
@@ -104,7 +124,7 @@ def East():
         dollar = dollar + 5
         print("You have $", dollar)
 
-    #battle()   #delete this line here temporarily (line 94) to skip battle. if you forgot what goes here. this is the command:   battle()    don't forget indent
+    battle()   #delete this line here temporarily (line 94) to skip battle. if you forgot what goes here. this is the command:   battle()    don't forget indent
 
     input(
         "Bill says 'nice job. you have killed your first enemy. you realize that your gun is not out of ammo. each battle will reduce your ammo by ten. "
@@ -151,13 +171,13 @@ def East():
     )
     i = 3
     while i > 0:
-        print("setting up camp.")
+        print(simple_colors.red("setting up camp."))
         time.sleep(1)
         clear()
-        print("setting up camp..")
+        print(simple_colors.blue("setting up camp.."))
         time.sleep(1)
         clear()
-        print("setting up camp...")
+        print(simple_colors.yellow("setting up camp..."))
         time.sleep(1)
         clear()
         i = i - 1
@@ -190,8 +210,8 @@ def East():
         time.sleep(1)
         clear()
         i = i - 1
-    print("you arewalking East more now passing Montreal")
-    #battle()  #delete this line to skip battle
+    print("you are walking East more now passing Montreal")
+    battle()  #delete this line to skip battle
     dir = input(
         "There is a path that leads north. There is a path that leads West"
     )

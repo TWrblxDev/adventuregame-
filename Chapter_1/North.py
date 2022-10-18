@@ -1,3 +1,20 @@
+import os 
+import time
+import Blaster_Pistol
+import Game_Time
+import keyboard
+import sys
+import Chapter_1.East
+import Chapter_1.North
+import Chapter_2.Chapter2
+import inv.inv
+import random
+import items.ammo
+import items.food
+import items.dollar
+import simple_colors
+import items.power
+import debug.debug
 import time
 import os
 import food
@@ -36,6 +53,6 @@ def north():
   print("Day 2 has rosen")
   print("Welcome", simple_colors.green("To Day 2"))
   print("You Wake up to", simple_colors.red (missingitem),(" Missing"))
-  print("You say", simple_colors.red('"OH NO!"', ['bold', 'underlined']))
+  print("You say", simple_colors.red('"OH NO!"'))
 
   
