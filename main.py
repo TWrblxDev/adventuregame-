@@ -5,9 +5,9 @@ import Game_Time
 import keyboard
 import sys
 import Chapter_1.East
-
 import Chapter_1.North
 import Chapter_2.Chapter2
+import Chapter_3.Chapter3
 import inv.inv
 import random
 import items.ammo
@@ -27,6 +27,7 @@ clear = lambda: os.system('clear')
 
 #Chapter_1.North.north()
 #Chapter_1
+#Chapter_3.Chapter3.Chapter3()
 #Chapter_1.East.East()
 
 #Chapter_2.Chapter2.loaded()
@@ -42,7 +43,7 @@ original_stdout = sys.stdout
 
 
 Credits.Credits.credits()
-time.sleep(50)
+time.sleep(1)
 clear()
 
 
@@ -121,7 +122,7 @@ if file == "Continue" or "continue":
             clear()
             time.sleep(1)
             #This part is for the weapon of choice
-            print(blue('Chose your Weapon'))
+            print(blue('Chose your Weapon', ["blink", "reverse"]))
             print("")
 
             file = input(blue("Your Weapon is Blaster Pistol. Type 'ok' to continue"))
