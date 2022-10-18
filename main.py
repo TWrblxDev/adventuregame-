@@ -130,7 +130,7 @@ if file == "Continue" or "continue":
                 Blaster_Pistol.loaded()
             
 #I think the best way to solve the problem with the weapons is to make it so you get to buy them later
-
+#
 
               
 
