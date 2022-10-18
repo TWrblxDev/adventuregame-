@@ -122,7 +122,7 @@ if file == "Continue" or "continue":
             clear()
             time.sleep(1)
             #This part is for the weapon of choice
-            print(blue('Chose your Weapon', ["blink", "reverse"]))
+            print(blue('Choose your Weapon', ["blink", "reverse"]))
             print("")
 
             file = input(blue("Your Weapon is Blaster Pistol. Type 'ok' to continue"))
