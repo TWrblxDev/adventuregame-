@@ -13,6 +13,7 @@ black = simple_colors.black
 #CREDITS
 def credits():
   print(red("[DEBUG] - Loaded Credits"))
+  print(yellow("press enter to skip"))
   print(cyan("Main Producers: James and Michael"))
   print(blue("Color Text by: James"))
   print(green("Chapters by: James and Micheal"))
@@ -23,7 +24,7 @@ def credits():
   print(red("Credits by: Michael and James"))
   print(yellow("Food, Money, and Ammo by: Michael"))
   print(magenta("Inventory by: James"))
-  print(black("Made on Replit", ['blink', 'bright',]))
+  input(black("Made on Replit", ['blink', 'bright',]))
 
   #I tried typing inv but the inventory did not show up. can u fix.
 #Inventory not working

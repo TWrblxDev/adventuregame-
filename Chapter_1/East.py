@@ -22,14 +22,15 @@ import Chapter_1.North
 import random
 import inv.inv
 import simple_colors
-
+import items.Battle
 dollar = 20
+battle = items.Battle.battle()
 
 PlayerHealth = 100
 EnemyHealth = 20
 EnemyDamage = 20
 
-bossnames = ["Mutated Bear", "Mutated Lion"]
+bossnames = ["Mutated Bear", "Mutated Lion", "Zombie"]
 
 
 def East():
@@ -53,79 +54,10 @@ def East():
         "Bill says' this is a turtorial battle. the battles will get harder. Good Luck'"
     )
 
-    #Battle
-    def battle():
-        import time
-        EnemyHealth = 100
-        PlayerHealth = 50
-        ClearLoop = 80
+    
+    battle
 
-        print("fight starting")
-        time.sleep(1)
-        print("...")
-        time.sleep(3)
-        print("ready?")
-        time.sleep(2)
-        print("fight!")
-        time.sleep(1)
-        while EnemyHealth > int(0):
-            while ClearLoop > int(0):
-                print(" ")
-                ClearLoop = (ClearLoop - 1)
-
-            if PlayerHealth < int(1):
-                print("You Died! Restart The Game To Replay")
-                exit()
-
-                for names in bossnames:
-                     print(names, simple_colors.red("Health = ", EnemyHealth))
-            time.sleep(0.5)
-            print("Player Health = ", PlayerHealth)
-            time.sleep(0.5)
-            print(" ")
-            print(
-                "type 'attack' to deal damage, type 'heal' to restore health by 30"
-            )
-            print("mistyping the action will cause you to miss the attack")
-            file = input("")
-
-            #Attack
-            if file == ("attack" or "Attack"):
-                EnemyHealth = (EnemyHealth - 10)
-                print(" ")
-                print("You attacked, and dealt 10 DMG")
-                time.sleep(1)
-            #heal
-            if file == ("heal" or "Heal"):
-                PlayerHealth = (PlayerHealth + 30)
-                print(" ")
-                print(simple_colors.cyan("You healed yourself for 20 HP"))
-                time.sleep(0.5)
-            #max health
-            if PlayerHealth > int(50):
-                PlayerHealth = 50
-                print(" ")
-                print(simple_colors.red("Max HP reached!"))
-                time.sleep(0.5)
-            #Enemy attack
-            PlayerHealth = (PlayerHealth - 10)
-            print(" ")
-            for names in bossnames:
-                 print(names, simple_colors.red(" attacked you, dealing 10 DMG"))
-            file = ("")
-            time.sleep(1)
-            ClearLoop = 80
-        #If you won battle
-        dollar = 20
-        print(" ")
-        print("You won the fight!")
-        print(" ")
-        print("+5 Dollars")
-        dollar = dollar + 5
-        print("You have $", dollar)
-
-    battle()   #delete this line here temporarily (line 94) to skip battle. if you forgot what goes here. this is the command:   battle()    don't forget indent
-
+  
     input(
         "Bill says 'nice job. you have killed your first enemy. you realize that your gun is not out of ammo. each battle will reduce your ammo by ten. "
     )
@@ -211,7 +143,9 @@ def East():
         clear()
         i = i - 1
     print("you are walking East more now passing Montreal")
-    battle()  #delete this line to skip battle
+  
+    battle  #delete this line to skip battle
+    
     dir = input(
         "There is a path that leads north. There is a path that leads West"
     )

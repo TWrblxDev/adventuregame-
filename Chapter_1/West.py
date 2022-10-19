@@ -20,6 +20,7 @@ import random
 import os
 import keyboard
 import inv.inv
+import items.Battle
 
 items = ['Money', 'Ammo', 'Food', 'Water', 'A Phone']
 attacks = ['A Dog', 'A Snake', 'A Bear']
@@ -84,7 +85,8 @@ def West():
       print("are you sure?")
     elif west.lower() == "yes":
       print("Ok")
-    exit()
+  battle()
+
     
   
   

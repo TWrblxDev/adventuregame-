@@ -10,6 +10,7 @@ import Chapter_2.Chapter2
 import Chapter_3.Chapter3
 import inv.inv
 import random
+import items
 import items.ammo
 import items.food
 import items.dollar
@@ -18,13 +19,14 @@ import items.power
 import items.monster
 import debug.debug
 import Credits.Credits
+import items.Battle
 
 
 
 clear = lambda: os.system('clear')
 
 
-
+items.Battle.battle()
 #Chapter_1.North.north()
 #Chapter_1
 #Chapter_3.Chapter3.Chapter3()
@@ -42,8 +44,10 @@ clear = lambda: os.system('clear')
 original_stdout = sys.stdout
 
 
+
+
 Credits.Credits.credits()
-time.sleep(1)
+
 clear()
 
 
