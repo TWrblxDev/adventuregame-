@@ -24,7 +24,7 @@ import inv.inv
 import simple_colors
 import items.Battle
 dollar = 20
-battle = items.Battle.battle()
+
 
 PlayerHealth = 100
 EnemyHealth = 20
@@ -55,7 +55,7 @@ def East():
     )
 
     
-    battle
+    items.Battle.battle()
 
   
     input(
@@ -144,7 +144,7 @@ def East():
         i = i - 1
     print("you are walking East more now passing Montreal")
   
-    battle  #delete this line to skip battle
+    items.Battle.battle()  #delete this line to skip battle
     
     dir = input(
         "There is a path that leads north. There is a path that leads West"

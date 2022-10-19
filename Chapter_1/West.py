@@ -22,6 +22,7 @@ import keyboard
 import inv.inv
 import items.Battle
 
+
 items = ['Money', 'Ammo', 'Food', 'Water', 'A Phone']
 attacks = ['A Dog', 'A Snake', 'A Bear']
 powerups = ['Monster Energy']
@@ -85,7 +86,7 @@ def West():
       print("are you sure?")
     elif west.lower() == "yes":
       print("Ok")
-  battle()
+  battle = items.Battle.battle()
 
     
   

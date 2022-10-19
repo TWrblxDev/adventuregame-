@@ -19,14 +19,14 @@ import items.power
 import items.monster
 import debug.debug
 import Credits.Credits
-import items.Battle
+
 
 
 
 clear = lambda: os.system('clear')
 
 
-items.Battle.battle()
+#battle = items.Battle.battle()
 #Chapter_1.North.north()
 #Chapter_1
 #Chapter_3.Chapter3.Chapter3()

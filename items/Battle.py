@@ -28,17 +28,36 @@ magenta = simple_colors.magenta
 green = simple_colors.green
 import time
 import random
+clear = lambda: os.system('clear')
+
+
 
 def battle():
-  names = "zombie"
   
   
-  EnemyHealth = 100
+
+  
+  
   PlayerHealth = 50
   ClearLoop = 80
 
   
-  
+  1 == "Zombie"
+  2 == "Huge Zombie"
+  3 == "Mutated Huge Zombie"
+
+  enemy = random.randint(1,3)
+  if enemy == 1:
+    EnemyHealth = random.randint(90,110)
+    print("You are fighting a zombie")
+  if enemy == 2:
+    EnemyHealth = random.randint(110, 130)
+    print("You are fighting a Huge Zombie")
+  if enemy == 3:
+    EnemyHealth = random.randint(130, 160)
+    print("You are fighting a Huge Mutated Zombie")
+
+    
   print("fight starting")
   time.sleep(1)
   print("...")
@@ -47,6 +66,7 @@ def battle():
   time.sleep(1)
   print("fight!")
   time.sleep(1)
+  
   while EnemyHealth > int(0):
     while ClearLoop > int(0):
       print(" ")
@@ -55,7 +75,7 @@ def battle():
       if PlayerHealth < int(1):
         print("You Died! Restart The Game To Replay")
         exit()
-
+      
       
       print("Enemy Health = ", EnemyHealth)
       time.sleep(0.5)
@@ -89,9 +109,10 @@ def battle():
             #Enemy attack
       PlayerHealth = (PlayerHealth - 10)
       print(" ")
-      print(red("The Enemy attacked you, dealing 10 DMG"))
+      print(red("The enemy attacked you dealing 10 DMG"))
       file = ("")
       time.sleep(1)
+      clear()
       ClearLoop = 80
         #If you won battle
       if EnemyHealth == 0:
