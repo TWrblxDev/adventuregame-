@@ -4,6 +4,7 @@ import Blaster_Pistol
 import Game_Time
 import keyboard
 import sys
+import Chapter_1
 import Chapter_1.East
 import Chapter_1.North
 import Chapter_2.Chapter2
@@ -28,7 +29,7 @@ clear = lambda: os.system('clear')
 
 #battle = items.Battle.battle()
 #Chapter_1.North.north()
-#Chapter_1
+#Chapter_1.Chapter_1.Chapter1()
 #Chapter_3.Chapter3.Chapter3()
 #Chapter_1.East.East()
 
@@ -39,7 +40,7 @@ clear = lambda: os.system('clear')
 
 #items.monster.monster()
 
-#debug.debug.debug()
+debug.debug.debug()
 
 original_stdout = sys.stdout
 
@@ -83,10 +84,21 @@ if file == "Continue" or "continue":
         time.sleep(3)
         clear()
         time.sleep(1)
-        print(cyan("Loading..."))
+        
+       
+        print(blue("Loading."))
         time.sleep(1)
         clear()
-        time.sleep(1.02)
+        print(cyan("Loading.."))
+        time.sleep(1)
+        clear()
+        print(red("Loading..."))
+        time.sleep(1)
+        clear()
+        
+        time.sleep(1)
+        clear()
+        time.sleep(1)
         print(yellow("Loaded"))
         time.sleep(1.999999999999999999999999999)
         clear()

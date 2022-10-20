@@ -23,6 +23,12 @@ import simple_colors
 import items.Battle
 missingitem = 'Your Phone'
 
+red = simple_colors.red
+yellow = simple_colors.yellow
+blue = simple_colors.blue
+cyan = simple_colors.cyan
+magenta = simple_colors.magenta
+green = simple_colors.green
 
 
 clear = lambda: os.system('clear')
@@ -59,5 +65,8 @@ def north():
   print("you say'maybe an enemy took it'")
   items.Battle.battle()
   print("Bill says 'look the zombie dropped something'")
-
-  
+  print("You say ' Hey look it's my", missingitem)
+  print("")
+  clear()
+  print(red("Chapter 1 ending..."))
+  print(red("Chapter 2"))

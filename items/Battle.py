@@ -45,8 +45,10 @@ def battle():
   1 == "Zombie"
   2 == "Huge Zombie"
   3 == "Mutated Huge Zombie"
+  4 == "Mutated Monster Fish"
+  5 == "Mutated Monster Spider"
 
-  enemy = random.randint(1,3)
+  enemy = random.randint(1,5)
   if enemy == 1:
     EnemyHealth = random.randint(90,110)
     print("You are fighting a zombie")
@@ -56,6 +58,12 @@ def battle():
   if enemy == 3:
     EnemyHealth = random.randint(130, 160)
     print("You are fighting a Huge Mutated Zombie")
+  if enemy == 4:
+    EnemyHealth = random.randint(90,150)
+    print("You are fighting a Mutated Monster Fish")
+  if enemy == 5:
+    EnemyHealth = random.randint(90,200)
+    print("You are fighting a Mutated Monster Spider")
 
     
   print("fight starting")

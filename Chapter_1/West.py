@@ -86,7 +86,7 @@ def West():
       print("are you sure?")
     elif west.lower() == "yes":
       print("Ok")
-  battle = items.Battle.battle()
+  items.Battle.battle()
 
     
   

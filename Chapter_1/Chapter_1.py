@@ -42,6 +42,8 @@ def Chapter1():
   Dollar = 20
   print(cyan("$"),Dollar)
   ch1 = input("Bill 'You can go East, West and North' Type East for East or West for West and north for North") 
+ 
+
   if ch1.lower() == "east":
     Chapter_1.East.East()
   elif ch1.lower() == "west":  
