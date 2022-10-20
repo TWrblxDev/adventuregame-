@@ -39,7 +39,7 @@ def Chapter1():
   print("Ammo:", ammo)
   food = 20
   print("Food:", food)
-  Dollar = 20
+  Dollar = 50
   print(cyan("$"),Dollar)
   ch1 = input("Bill 'You can go East, West and North' Type East for East or West for West and north for North") 
  

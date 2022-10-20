@@ -80,14 +80,9 @@ def West():
     print("Please input yes or no")
     if west.lower() == "yes":
       print("Ok Lets go")
-    elif west.lower() == "no":
-      print("Ok lazy Butt")
-    elif west.lower() == "no":
-      print("are you sure?")
-    elif west.lower() == "yes":
-      print("Ok")
-  items.Battle.battle()
 
+  items.Battle.battle()
+  print("You survuved your first battle. another path leads North and west")
     
   
   

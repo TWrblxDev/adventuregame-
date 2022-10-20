@@ -21,7 +21,13 @@ import food
 import ammo
 import simple_colors
 import items.Battle
-missingitem = 'Your Phone'
+import random
+
+1 == "Your Water"
+2 == "Your Food"
+3 == "Your Flashlight"
+4 == "Your Backpack"
+5 == "Your Phone"
 
 red = simple_colors.red
 yellow = simple_colors.yellow
@@ -60,13 +66,28 @@ def north():
         i = i - 1
   print("Day 2 has rosen")
   print("Welcome", simple_colors.green("To Day 2"))
-  print("You Wake up to", simple_colors.red (missingitem),(" Missing"))
+  
+  missing = random.randint(1,5)
+  if missing == 1:
+    print(red("Your missing your Water bottle"))
+  if missing == 2:    
+    print(red("Your missing your your rations"))
+  if missing == 3:
+    print(red("Your missing your backpack"))
+  if missing == 4:
+    print("Your Missing your Flashlight")
+  if missing == 5:
+    print("Your Missing Your Phone")
+
+ 
+  
   print("You say", simple_colors.red('"OH NO!"'))
   print("you say'maybe an enemy took it'")
   items.Battle.battle()
   print("Bill says 'look the zombie dropped something'")
-  print("You say ' Hey look it's my", missingitem)
+  print("You say ' Hey look it's my item'")
   print("")
   clear()
   print(red("Chapter 1 ending..."))
   print(red("Chapter 2"))
+  Chapter_2.Chapter2.loaded()

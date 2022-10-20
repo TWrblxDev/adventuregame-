@@ -12,6 +12,5 @@ def debug():
   items.dollar.dollar()
   inv.inv.inv()
   items.monster.monster()
-
   print(simple_colors.red("Loaded All Files"))
   

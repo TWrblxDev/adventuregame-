@@ -26,6 +26,7 @@ blue = simple_colors.blue
 cyan = simple_colors.cyan
 magenta = simple_colors.magenta
 green = simple_colors.green
+black = simple_colors.black
 import time
 import random
 clear = lambda: os.system('clear')
@@ -91,7 +92,7 @@ def battle():
       time.sleep(0.5)
       print(" ")
       print(
-                "type 'attack' to deal damage, type 'heal' to restore health by 30"
+                "type 'attack' to deal damage, type 'heal' to restore health by 20"
             )
       print("mistyping the action will cause you to miss the attack")
       file = input("")
@@ -101,12 +102,15 @@ def battle():
         EnemyHealth = (EnemyHealth - 10)
         print(" ")
         print(green("You attacked, and dealt 10 DMG"))
+        #Cheat
         time.sleep(1)
+      if file == ("die"):
+        EnemyHealth = 0
             #heal
       if file == ("heal" or "Heal"):
-        PlayerHealth = (PlayerHealth + 30)
+        PlayerHealth = (PlayerHealth + 20)
         print(" ")
-        print(cyan("You healed yourself for 20 HP"))
+        print(cyan("You healed yourself for 20 HP, but the zombie will attack."))
         time.sleep(0.5)
            #max health
         if PlayerHealth > int(60):
@@ -118,7 +122,7 @@ def battle():
       PlayerHealth = (PlayerHealth - 10)
       print(" ")
       print(red("The enemy attacked you dealing 10 DMG"))
-      file = ("")
+      
       time.sleep(1)
       clear()
       ClearLoop = 80
@@ -126,10 +130,10 @@ def battle():
       if EnemyHealth == 0:
         dollar = 5
         print(" ")
-        print("You won the fight!")
+        print(magenta("You won the fight!", ['bright']))
         print(" ")
-        print("+5 Dollars")
+        print(cyan("+5 Dollars"))
         dollar = dollar + 5
         print("You have $", dollar)
-
-    battle()   #delete this line here temporarily (line 94) to skip battle. if you forgot what goes here. this is the command:   battle()    don't forget indent
+      break
+     #delete this line here temporarily (line 94) to skip battle. if you forgot what goes here. this is the command:   battle()    don't forget indent

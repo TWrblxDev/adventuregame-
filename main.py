@@ -23,11 +23,10 @@ import Credits.Credits
 
 
 
-
 clear = lambda: os.system('clear')
 
 
-#battle = items.Battle.battle()
+battle = items.Battle.battle()
 #Chapter_1.North.north()
 #Chapter_1.Chapter_1.Chapter1()
 #Chapter_3.Chapter3.Chapter3()
@@ -35,7 +34,7 @@ clear = lambda: os.system('clear')
 
 #Chapter_2.Chapter2.loaded()
 #inv.inv.inv()
-#exit()
+exit()
 #Make sure to clean up the statements and to add comments, I have no idea what the code is doing
 
 #items.monster.monster()
@@ -100,7 +99,7 @@ if file == "Continue" or "continue":
         clear()
         time.sleep(1)
         print(yellow("Loaded"))
-        time.sleep(1.999999999999999999999999999)
+        time.sleep(1)
         clear()
         print(cyan("Adventure Game"))
         print(red("A game by"))
@@ -126,7 +125,7 @@ if file == "Continue" or "continue":
             )
             
             clear()
-            input('On the radio, "Good Morning Canada" the announcer says')
+            input(blue('On the radio, "Good Morning Canada" the announcer says'))
             input(
                 "We interupt this program for breaking news!! Zombies have attacked eastern Canada and on on the move to Ontario. If you are near these area we urge you to ready yourselfs. "
             )
