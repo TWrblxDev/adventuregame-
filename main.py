@@ -21,12 +21,13 @@ import items.power
 import items.monster
 import debug.debug
 import Credits.Credits
+import dev.menu
 
 
 
 clear = lambda: os.system('clear')
 
-
+#dev.menu.devmenu()
 #battle = items.Battle.battle()
 #Chapter_1.North.north()
 #Chapter_1.West.West()
@@ -54,6 +55,7 @@ clear()
 
 
 
+
 #simple_colors
 red = simple_colors.red
 yellow = simple_colors.yellow
@@ -64,92 +66,87 @@ green = simple_colors.green
 clear()
 
 
+
+
+
+
+
 print(yellow("Welcome"), blue("To the"), red("adventure Game"))
-file = input(yellow("Continue or start a new game? "))
+file = input(yellow("Start a new game? "))
 
-clear()
+print("please create an account")
+dev.menu.devmenu()
 
 
-
-time.sleep(5)
-
-clear()
-
-if file == "Continue" or "continue":
-    file = input("which chapter do you want to start at.")
-    if file == "Chapter 2" or "chapter 2":
-      Chapter_2.Chapter2.loaded()
-      exit()
-    file = input(yellow("Start a new game?"))
-    if file == "start" or "Start" or "yes" or "Yes":
-        print("")
-        print(red("IMPORTANT - when typing something, use lowercase"))
-        #inv.inv.inv()
-        time.sleep(3)
-        clear()
-        time.sleep(1)
+if file.lower == "start" or "Start" or "yes" or "Yes":
+  print("Starting new game")
+  print("")
+  print(red("IMPORTANT - when typing something, use lowercase"))
+  #inv.inv.inv()
+  time.sleep(3)
+  clear()
+  time.sleep(1)
         
        
-        print(blue("Loading."))
-        time.sleep(1)
-        clear()
-        print(cyan("Loading.."))
-        time.sleep(1)
-        clear()
-        print(red("Loading..."))
-        time.sleep(1)
-        clear()
-        
-        time.sleep(1)
-        clear()
-        time.sleep(1)
-        print(yellow("Loaded"))
-        time.sleep(1)
-        clear()
-        print(cyan("Adventure Game"))
-        print(red("A game by"))
-        print(yellow("By James and Michael"))
-        print(blue("Have fun"))
-        print(magenta("A personal project by us and others"))
-        print(blue("2022"))
-        time.sleep(5)
-        clear()
-        print(yellow("Are you ready?"))
-        file = input(" To Play: ")
-        if file == "yes" or "Yes":
-            clear()
-            NAME = str(input(blue("Enter your name for the game: ")))
-            print("hello", NAME, "I am Your Guide for your adventure. You can call me Bill")
-            time.sleep(2)
-            print("Starting game...")
-            clear()
-            print("Starting game...")
-            clear()
-            input(
+  print(blue("Loading."))
+  time.sleep(1)
+  clear()
+  print(cyan("Loading.."))
+  time.sleep(1)
+  clear()
+  print(red("Loading..."))
+  time.sleep(1)
+  clear()
+  time.sleep(1)
+  clear()
+  time.sleep(1)
+  print(yellow("Loaded"))
+  time.sleep(1)
+  clear()
+  print(cyan("Adventure Game"))
+  print(red("A game by"))
+  print(yellow("By James and Michael"))
+  print(blue("Have fun"))
+  print(magenta("A personal project by us and others"))
+  print(blue("2022"))
+  time.sleep(5)
+  clear()
+  print(yellow("Are you ready?"))
+  file = input(" To Play: ")
+  if file == "yes" or "Yes":
+    clear()
+  NAME = str(input(blue("Enter your name for the game: ")))
+  print("hello", NAME, "I am Your Guide for your adventure. You can call me Bill")
+  time.sleep(2)
+  print("Starting game...")
+  clear()
+  print("Starting game...")
+  clear()
+  input(
                 "You wake up in a nice cozy bed. You look around and see a bunch of cloths on the floor. You walk over to your radio and turn it on. "
             )
             
-            clear()
-            input(blue('On the radio, "Good Morning Canada" the announcer says'))
-            input(
+  clear()
+  input(blue('On the radio, "Good Morning Canada" the announcer says'))
+  input(
                 "We interupt this program for breaking news!! Zombies have attacked eastern Canada and on on the move to Ontario. If you are near these area we urge you to ready yourselfs. "
             )
-            print("")
-            print("")
-            print("")
-            print("")
-            input(red('You say "OH NO. I better get ready for battle."'))
-            clear()
-            time.sleep(1)
-            #This part is for the weapon of choice
-            print(blue('Choose your Weapon', ["blink", "reverse"]))
-            print("")
+  print("")
+  print("")
+  print("")
+  print("")
+  input(red('You say "OH NO. I better get ready for battle."'))
+  clear()
+  time.sleep(1)
+  #This part is for the weapon of choice
+  print(blue('Choose your Weapon', ["blink", "reverse"]))
+  print("")
 
-            file = input(blue("Your Weapon is Blaster Pistol. Type 'ok' to continue"))
+  file = input(blue("Your Weapon is Blaster Pistol. Type 'ok' to continue"))
 
-            if file == "ok" or "Ok" or "OK":
-                Blaster_Pistol.loaded()
-            
+  if file == "ok" or "Ok" or "OK":
+    Blaster_Pistol.loaded()
+           
 #I think the best way to solve the problem with the weapons is to make it so you get to buy them later
 #
 
