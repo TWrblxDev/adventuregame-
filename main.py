@@ -7,6 +7,7 @@ import sys
 import Chapter_1
 import Chapter_1.East
 import Chapter_1.North
+import Chapter_1.West
 import Chapter_2.Chapter2
 import Chapter_3.Chapter3
 import inv.inv
@@ -26,15 +27,16 @@ import Credits.Credits
 clear = lambda: os.system('clear')
 
 
-battle = items.Battle.battle()
+#battle = items.Battle.battle()
 #Chapter_1.North.north()
+#Chapter_1.West.West()
 #Chapter_1.Chapter_1.Chapter1()
 #Chapter_3.Chapter3.Chapter3()
 #Chapter_1.East.East()
 
 #Chapter_2.Chapter2.loaded()
 #inv.inv.inv()
-exit()
+#exit()
 #Make sure to clean up the statements and to add comments, I have no idea what the code is doing
 
 #items.monster.monster()
@@ -74,7 +76,10 @@ time.sleep(5)
 clear()
 
 if file == "Continue" or "continue":
-    print(red("there is no saved game!"))
+    file = input("which chapter do you want to start at.")
+    if file == "Chapter 2" or "chapter 2":
+      Chapter_2.Chapter2.loaded()
+      exit()
     file = input(yellow("Start a new game?"))
     if file == "start" or "Start" or "yes" or "Yes":
         print("")

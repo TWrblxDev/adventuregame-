@@ -23,9 +23,8 @@ import random
 import inv.inv
 import simple_colors
 import items.Battle
+
 dollar = 20
-
-
 PlayerHealth = 100
 EnemyHealth = 20
 EnemyDamage = 20
@@ -47,7 +46,7 @@ def East():
     food = food - 1
     print("Food", food)
     print("You here rustling in the bushes nearby your camp.")
-    print("before you can do anything, a Zombie stumbles out of the bushes")
+    print("before you can do anything, a Zombie stumbles out of the bushes") 
     print("Bill says'Battle time'")
     print("you can chose 2 options. attack, or heal.")
     input(

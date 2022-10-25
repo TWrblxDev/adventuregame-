@@ -15,5 +15,12 @@ import items.dollar
 import simple_colors
 import items.power
 import debug.debug
+
+clear = lambda: os.system('clear')
+
 def loaded():
- print("[DEBUG] - Loaded Chapter 2")
+  print("[DEBUG] - Loaded Chapter 2")
+  clear()
+  print(simple_colors.blue("Chapter 2"))
+  print("TIP: when you start a game. type Chapter 2 and chapter 2 will load.")
+  

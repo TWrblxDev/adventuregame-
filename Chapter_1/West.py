@@ -9,6 +9,7 @@ import Chapter_1.North
 import Chapter_2.Chapter2
 import inv.inv
 import random
+import items
 import items.ammo
 import items.food
 import items.dollar
@@ -81,8 +82,18 @@ def West():
     if west.lower() == "yes":
       print("Ok Lets go")
 
-  items.Battle.battle()
+      items.Battle.battle()
+  
   print("You survuved your first battle. another path leads North and west")
+  file = input ("North or west")
+
+  if file.lower() == "north" or "North":
+    Chapter_1.North.north()
+  elif file.lower() == "west":  
+    print("West")
+
+
+    
     
   
   
